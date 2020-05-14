@@ -1,11 +1,17 @@
 var padManager = require('ep_etherpad-lite/node/db/PadManager');
 
+var settings = require('ep_etherpad-lite/node/utils/Settings');
+var pluginSettings = settings.ep_simple_creator;
+
+var padPath = pluginSettings.padPath;
+
 exports.eejsBlock_indexWrapper = function(hook_name, args, cb)
 {
     // remove input form
     args.content += '<script>' + String(removeInput) + 'removeInput();</script>';
     // replace create function
     args.content += '<script src="./static/js/jquery.js"></script>';
+    args.content += '<script> const padPath = "' + padPath + '";</script>';
     args.content += '<script>' + String(go2Next) + '</script>';
     args.content = args.content.replace("go2Random()", "go2Next()");
 };
@@ -22,7 +28,7 @@ function go2Next()
         url: "next_id",
         dataType: 'json',
         success: function ( data ) {
-            window.location = "p/" + data.id;
+            window.location = padPath + "/" + data.id;
         }
     });
 }
