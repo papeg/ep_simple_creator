@@ -1,0 +1,11 @@
+{
+  "parts": [
+    {
+      "name": "simple_creator",
+      "hooks": {
+        "expressCreateServer" : "ep_simple_creator/index:registerRoute",
+        "eejsBlock_indexWrapper": "ep_simple_creator/index"
+      }
+    }
+  ]
+}
