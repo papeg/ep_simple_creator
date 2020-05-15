@@ -1,9 +1,13 @@
 var padManager = require('ep_etherpad-lite/node/db/PadManager');
 
 var settings = require('ep_etherpad-lite/node/utils/Settings');
-var pluginSettings = settings.ep_simple_creator;
 
-var padPath = pluginSettings.padPath;
+var padPath = "p";
+if (settings.ep_simple_creator) {
+    if (settings.ep_simple_creator.padPath) {
+        padPath = settings.ep_simple_creator.padPath;
+    }
+}
 
 exports.eejsBlock_indexWrapper = function(hook_name, args, cb)
 {
