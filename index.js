@@ -69,6 +69,7 @@ function getNextId(data)
             }
         }
     }
+    return 0;
 }
 
 function format(data)
