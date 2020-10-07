@@ -56,7 +56,7 @@ exports.registerRoute = function(hook_name, args, cb)
 function getNextId(data)
 {
     if (data && data.padIDs) {
-        for (var id = 0; id < data.padIDs.length; id++) {
+        for (var id = 0; id <= data.padIDs.length; id++) {
             var found = false;
             for (var i = 0; i < data.padIDs.length; i++) {
                if (data.padIDs[i] == id) {
