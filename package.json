@@ -1,6 +1,6 @@
 {
   "name": "ep_simple_creator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Create new pads with simple ids",
   "main": "index.js",
   "repository": {
