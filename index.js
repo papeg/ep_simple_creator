@@ -18,6 +18,9 @@ exports.eejsBlock_indexWrapper = function(hook_name, args, cb)
     args.content += '<script> const padPath = "' + padPath + '";</script>';
     args.content += '<script>' + String(go2Next) + '</script>';
     args.content = args.content.replace("go2Random()", "go2Next()");
+
+    // add workaround style
+    args.content += "<style>body > #wrapper{margin: auto; margin-top: 3em;}</style>";
 };
 
 function removeInput()
