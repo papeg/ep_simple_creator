@@ -1,12 +1,12 @@
 {
   "name": "ep_simple_creator",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Create new pads with simple ids",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/filehoarder/ep_simple_creator"
+    "url": "https://github.com/papeg/ep_simple_creator"
   },
-  "author": "Gerrit Pape <papeg@mail.upb.de>",
+  "author": "Gerrit Pape <mail@gerritpape.eu>",
   "license": "APGLv3"
 }
